@@ -77,4 +77,57 @@ public partial class MainWindow : Window
     {
         this.TestLoading.State = MyLoading.LoadingState.Error;
     }
+
+    private void BtnTitleSelect0_Click(object sender, RoutedEventArgs e)
+    {
+        if (this.FindControl<Grid>("PanMain") is Grid panMain)
+        {
+
+            panMain.Children.Clear();
+
+            var startGameButton = new PCL2.Neo.Controls.MyButton
+            {
+
+                ColorType = MyButton.ColorState.Highlight,
+                Height = 60,
+                Margin = new Thickness(10),
+                Text = "启动游戏",
+                Width = 200,
+
+            };
+
+
+            panMain.Children.Add(startGameButton);
+        }
+    }
+
+    private void BtnTitleSelect1_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        ClearContentArea();
+    }
+
+
+    private void BtnTitleSelect2_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        ClearContentArea();
+    }
+
+    private void BtnTitleSelect3_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        ClearContentArea();
+    }
+
+    private void BtnTitleSelect4_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        ClearContentArea();
+    }
+
+
+    private void ClearContentArea()
+    {
+        if (this.FindControl<Grid>("PanMain") is Grid panMain)
+        {
+            panMain.Children.Clear();
+        }
+    }
 }
